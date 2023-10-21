@@ -29,8 +29,7 @@ urlpatterns = [
     path('/', views.home, name='home'),
     path('logar/', views.logar, name='logar'),
     path('logar/', auth_views.LoginView.as_view(), name='login'),
-    path('register/', views.logar, name='register'),
-    path('register/', auth_views.RegisterView.as_view(), name='register'),
+    path('register/', views.register, name='register'),
     path('dologin/', views.dologin, name='dologin'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
 
