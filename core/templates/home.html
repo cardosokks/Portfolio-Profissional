@@ -1,1 +1,23 @@
-<h1>oi</h1>
+{% extends 'base.html' %}
+{% load static %}
+{% block titulo %}ALF4RD SYSTEM{% endblock %}
+
+{% block header %}
+{% if user.is_authenticated %}
+{% include 'navbar.html' %}
+{% include 'sidebar.html' %}
+{% endif%}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+{% include 'wallpaper_fullscreen.html' %}
+
+
+{% endblock %}
+
+
+
+{% block script %}
+{% endblock %}

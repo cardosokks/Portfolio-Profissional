@@ -1,1 +1,67 @@
-<h1>oi</h1>
+<!doctype html>
+{% load static %}
+{% if user.is_authenticated %}
+  <script>window.location.href = "{% url 'home' %}";</script>
+{% else %}
+<html lang="pt-br">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="{% static 'scripts/manifest.json' %}">
+    <meta name="description" content="Alf4rd Systems">
+    <meta name="author" content="Ricardo Cardoso - @cardosokks">
+    <meta name="generator" content="Alf4rd 0.5">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <title>Login - Alf4rd Systems</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'media/logo.png' %}"/>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css\login_page.css' %}" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    <video autoplay muted loop class="background">
+      <source src="https://screensaver00000alf4rd.on.drv.tw/home/video7.mp4" type="video/mp4">
+      <img src="{% static 'media\default.jpg' %}" alt="Background-image">
+    </video>
+    <main class="form-signin">
+      <form name="form-users" id="formUsers" method="post" action="/dologin/">
+        {% csrf_token %}
+        <img class="mb-4 perfil" src="{% static 'media\logo_white.png' %}" alt="" width="80" height="85">
+        <h1 class="h3 mb-3 fw-normal"><i><strong style="text-decoration: line-through;">Bem Vindos</strong></i></h1>
+
+        <div class="form-floating">
+          <input type="text" name="username" id="username" class="form-control" id="floatingInput" required autofocus>
+          <label for="floatingInput">Usuário</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" name="password" class="form-control" id="floatingPassword" required>
+          <label for="floatingPassword">Senha</label>
+          <p>
+            {% if msg %}
+              <div class="alert {{class}}" style="border-radius: 30px;">
+                {{msg}}
+              </div>
+            {% endif %}
+          </p>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-primary entrar" type="submit">ENTRAR</button>
+        <p class="mt-5 mb-3 rodape">&copy; 2023 ALF4RD </p>
+      </form>
+    </main>
+    <div class="box-message">
+        {% for anuncio in anuncios %}
+        <div class="card anuncioz mg-2">
+        <div class="card-body">
+          <h5 class="card-title">{{ anuncio.titulo }}</h5>
+          <p class="card-text">{{ anuncio.descricao }}</p>
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+  </body>
+</html>
+{% endif %}

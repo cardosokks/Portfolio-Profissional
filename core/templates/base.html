@@ -1,0 +1,62 @@
+<html lang="pt-br">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Alf4rd Systems. 'HELLO WORLD' ">
+    <meta name="keywords" content="Alf4rd Systems, Sistemas, informação, segurança, Security">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Alf4rd - Ricardo Cardoso - instagram:cardosokks - instagram:alf4rd_ofc">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="{% static 'scripts/manifest.json' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'media/logo.png' %}" />
+    
+    <!-- FONTS  -->
+
+    <!-- Iceberg -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
+    
+    <title>
+        {% block titulo %}{% endblock %}
+    </title>
+
+    <!- CSS AQUI ->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+        <!- BOOTSTRAP ->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+                crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+                crossorigin="anonymous"></script>
+            <!- FONTS ->
+                <!- NAME: KREON ->
+                    <link rel="preconnect" href="https://fonts.googleapis.com">
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                    <link href="https://fonts.googleapis.com/css2?family=Kreon:wght@300&display=swap" rel="stylesheet">
+
+                    <!- FONT AWESOME PARA ICONES PERSONALIZADOS ->
+                        <script src="https://kit.fontawesome.com/5fa3aac64f.js" crossorigin="anonymous"></script>
+
+                        <!- JQUERY ->
+                            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+                            {% block head%}
+                            {% endblock %}
+
+</head>
+
+<body>
+    {% block header %}
+    {% endblock %}
+    {% block content %}
+    {% endblock %}
+
+</body>
+{% block script %}
+{% endblock %}
+
+</html>
