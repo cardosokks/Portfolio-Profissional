@@ -26,7 +26,7 @@ handler404 = 'core.views.pagina_404'
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
-    path('/', views.home, name='home'),
+    path('', views.home, name='home'),
     path('logar/', views.logar, name='logar'),
     path('logar/', auth_views.LoginView.as_view(), name='login'),
     path('register/', views.register, name='register'),
