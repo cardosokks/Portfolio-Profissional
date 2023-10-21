@@ -17,6 +17,10 @@ Tarefas
 - Sistema de XP para cada certificado adicionado
 - AMBIENTE DE INTERAÇÃO COM VISITANTES 
 
+Ferramentas:
+  - Visual Studio Code
+  - Git
+  - GitHub
 
 Tecnologias Utilizadas:
 - Python
