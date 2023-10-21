@@ -20,7 +20,7 @@ from django.urls import path
 from django.conf.urls import handler404
 from django.conf import settings
 from django.conf.urls.static import static
-from panel import views
+from core import views
 
 handler404 = 'core.views.pagina_404'
 
