@@ -1,5 +1,7 @@
 # Portfólio Profissional
 
+SITE: http://ricardo-cardoso.ddns.net/
+
 
 
 A idéia inicial desse git é criar uma ambiente onde eu possa adicionar minhas especificações e conhecimentos profissionais de forma prática. 
