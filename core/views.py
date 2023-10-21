@@ -9,6 +9,9 @@ def home(request):
 def logar(request):
     return render(request, 'registration/login.html')
 
+def register(request):
+    return render(request, 'registration/register.html')
+
 def dologin(request):
     username = request.POST["username"]
     password = request.POST["password"]

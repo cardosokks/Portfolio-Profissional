@@ -26,13 +26,14 @@ handler404 = 'core.views.pagina_404'
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
+    path('/', views.home, name='home'),
     path('logar/', views.logar, name='logar'),
     path('logar/', auth_views.LoginView.as_view(), name='login'),
+    path('register/', views.logar, name='register'),
+    path('register/', auth_views.RegisterView.as_view(), name='register'),
     path('dologin/', views.dologin, name='dologin'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
 
-    path('perfil/', views.perfil, name='perfil'),
-    path('config/', views.pageConfig, name='configPage'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 if settings.DEBUG:
     from django.contrib.staticfiles.urls import staticfiles_urlpatterns
