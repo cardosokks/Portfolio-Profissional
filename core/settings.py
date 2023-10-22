@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8wr#xj)b(5n81+6q^3^ac431azut30@#2d+xn@^)@amb9@sg+u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['54.232.234.108', 'ricardo-cardoso.ddns.net', 'localhost']
+ALLOWED_HOSTS = ['*', '54.232.234.108', 'ricardo-cardoso.ddns.net', 'localhost']
 
 # QUANDO TIVER O CERTIFICADO ATIVADO COLOQUE TRUE;
 SECURE_SSL_REDIRECT = False
@@ -76,14 +76,21 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+# DATABASES = {
+#     'default':{
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'core',
+#         'USER': 'admin',
+#         'PASSWORD': '12F878$##bvPPS89!185a',
+#         'HOST': 'localhost',
+#         'PORT': ''
+#     }
+# }
+
 DATABASES = {
-    'default':{
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'core',
-        'USER': 'admin',
-        'PASSWORD': '12F878$##bvPPS89!185a',
-        'HOST': 'localhost',
-        'PORT': ''
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

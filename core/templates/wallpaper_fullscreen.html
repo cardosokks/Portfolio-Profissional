@@ -5,29 +5,23 @@
     <video autoplay loop playsinline muted><source id="vsrc" /></video>
 
     <div class="header-text">
-      <h1 title="CLIQUE PARA INICIAR">
+      <h1>
         {% if user.is_authenticated %}
         <img class="efeito-flutuante-infinito logomarca" id="logomarca" src="{% static 'media/logo.png' %}">
-        <span>ALF4RD SYSTEM</span>
-        Technology and CODE
+        <span class="titulo1">Ricardo Jhonny R. Cardoso</span>
+        Portfólio Profissional
         {% else %}
-        <a href="{% url 'login' %}">
         <img class="efeito-flutuante-infinito logomarca" id="logomarca" src="{% static 'media/logo.png' %}">
-        </a>
-        <span>ALF4RD SYSTEM</span>
+        <span class="titulo1">Ricardo Jhonny R. Cardoso</span>
+        <br>
+        Portfólio Profissional
+        <br><br><br>
+        
+        <button title="CLIQUE PARA ACESSAR" onclick=window.location.href="{% url 'login' %}"; class="btn-continuar">ACESSAR</button>
         {% endif %}
       </h1>
     </div>
 
-    <!-- <div class="description">
-      <marquee>
-        <h5>
-        {% for anuncio in anuncios %}
-          {{ anuncio.titulo }} - {{ anuncio.descricao }}
-        {% endfor %}
-        </h5>
-      </marquee>
-    </div> -->
     {% if user.is_authenticated %}
     <div class="protect-screen"></div>
     {% endif %}
@@ -36,10 +30,6 @@
 
 {% block script %}
 <script>
-  // Gera um número aleatório entre 1 e 23
-  function getRandomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-  document.getElementById("vsrc").src = "{{ videoscreensaver.url }}";
+  document.getElementById("vsrc").src ="http://screensaver123456gamers.on.drv.tw/home/video13.mp4";
 </script>
 {% endblock %}

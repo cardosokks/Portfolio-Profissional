@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block titulo %}ALF4RD SYSTEM{% endblock %}
+{% block titulo %}HOME : RICARDO CARDOSO{% endblock %}
 
 {% block header %}
 {% if user.is_authenticated %}
@@ -13,6 +13,13 @@
 {% block content %}
 
 {% include 'wallpaper_fullscreen.html' %}
+
+<div class="social-media">           
+        <button title="Instagram Profissional" onclick="window.location.href='https://instagram.com/alf4rd_ofc'"; class="btn-instagram"><i class="fa-brands fa-instagram"></i><p>ALF4RD_OFC</p></button>
+        <button title="Instagram Pessoal" onclick="window.location.href='https://instagram.com/cardosokks'"; class="btn-instagram"><i class="fa-brands fa-instagram"></i><p>CARDOSOKKS</p></button>
+        <button title="Ir GitHub" onclick="window.location.href='https://github.com/cardosokks'"; class="btn-github"><i class="fa-brands fa-square-github"></i><p>GITHUB</p></button>
+        <button title="Ir LinkedIn" onclick="window.location.href='https://linkedin.com/in/cardosokks'"; class="btn-linkedin"><i class="fa-brands fa-linkedin"></i><p>LINKEDIN</p></button>
+  </div>
 
 
 {% endblock %}

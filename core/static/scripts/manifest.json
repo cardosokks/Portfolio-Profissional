@@ -1,0 +1,56 @@
+{
+  "short_name": "PORTFÓLIO RICARDO CARDOSO",
+  "name": "PORTFÓLIO RICARDO CARDOSO",
+  "icons": [
+    {
+      "src": "media/logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "media/logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "media/logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "id": "/",
+  "start_url": "/",
+  "background_color": "white",
+  "display": "fullscreen",
+  "scope": "/",
+  "theme_color": "#3367D6",
+  "shortcuts": [
+    {
+      "name": "Alf4rd System",
+      "short_name": "ALF4RD",
+      "description": "ALF4RD SYSTEM - Controle de sistema",
+      "url": "/",
+      "icons": [
+        {
+          "src": "media/logo.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "description": "Alf4rd System",
+  "screenshots": [
+    {
+      "src": "media/logo.png",
+      "type": "image/png",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "media/logo.png",
+      "type": "image/jpg",
+      "sizes": "720x540",
+      "form_factor": "wide"
+    }
+  ]
+}
