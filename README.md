@@ -1,4 +1,4 @@
-# Portfólio Profissional
+# Portfólio Profissional Python/DJANGO
 
 SITE: http://ricardo-cardoso.ddns.net/
 
